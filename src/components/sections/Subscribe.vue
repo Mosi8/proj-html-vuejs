@@ -23,6 +23,7 @@ export default {
     background-image: url('../../assets/img/subscribe-sec-bg.png');
     background-size: cover;
     background-position: center;
+    background-color: #fff;
     height: 550px;
 
     .container {

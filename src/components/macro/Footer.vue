@@ -4,9 +4,29 @@
           <div class="row">
               <div class="col-3 mborder">
                   <Logo :immagine="logoFooter" class="logofoot"/>
+                  <div class="social">
+                    <a href="#" class="logoSocial ms-2 me-2">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <span class="nomiSocial">Facebook</span>
+                    </a>
+                    <a href="#" class="logoSocial ms-2 me-2">
+                        <i class="fa-brands fa-instagram"></i>
+                        <span class="nomiSocial">Instagram</span>
+                    </a>
+                    <a href="#" class="logoSocial ms-2 me-2">
+                        <i class="fa-brands fa-twitter"></i>
+                        <span class="nomiSocial">Twitter</span>
+                    </a>
+                        <a href="#" class="logoSocial ms-2 me-2">
+                        <i class="fa-brands fa-youtube"></i>
+                    <span class="nomiSocial">Youtube</span>
+                    </a> 
+                  </div>
               </div>
               <div class="col-3 px-4 mborder">
-                  
+                <ul class="menufoot">
+                    <li v-for="(element, index) in menu" :key="index"><a href="#">{{element}}</a></li>
+                </ul>
               </div>
               <div class="col-3 px-4 mborder">
                   <h6>CONTACT</h6>
@@ -29,6 +49,7 @@
 
 <script>
 import Logo from '../commons/Logo.vue'
+import vocimenu from '../../assets/data/vocimenu.js'
 
 export default {
     name: 'Footer',
@@ -38,6 +59,7 @@ export default {
     data(){
         return {
             logoFooter: require('../../assets/img/avada-food-logo-mob-2x.png'),
+            menu: vocimenu,
         }
     }
 
@@ -56,8 +78,47 @@ export default {
         color: $mainColor;
 
         .logofoot{
-            width: 100%;
+            height: 40%;
             padding: 5px 35px;
+        }
+        .social {
+            margin: 30px 0;
+            padding: 5px 35px; 
+        }
+        .logoSocial {
+            color: #afafaf;
+            text-decoration: none;
+            font-size: 20px;
+            position: relative;
+            text-align: center;
+        }
+
+        .logoSocial:hover .nomiSocial {
+            display: block;
+        }
+        .nomiSocial {
+            position: absolute;
+            top: 25px;
+            left: 0px;
+            transform: translateX(-30%);
+            display: none;
+            font-size: 12px;
+        }
+
+        .menufoot {
+            margin: 0;
+            list-style-type: none;
+            li {
+                padding: 10px 0;
+                a {
+                    text-decoration: none;
+                    color: #000;
+                    padding: 10px 0;
+                }
+            }
+            li:hover a{
+                color: $mainColor;
+            }
         }
 
         h6 {
@@ -72,7 +133,7 @@ export default {
         }
     }
     .fondopagina {
-        background-color: #f6f7f1;
+        background-color: $secondColor;
         font-size: 12px;
         line-height: 12px;
         padding: 30px 0;
