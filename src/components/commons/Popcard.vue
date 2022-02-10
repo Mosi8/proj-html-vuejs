@@ -31,16 +31,17 @@ export default {
 <style lang="scss" scoped>
 @import '../../assets/style/variables.scss';
 .interno {
-    padding: 10px;
     width: 100%;
     height: 100%;
     
     .immagine {
         width: 100%;
+        height: 100%;
         position: relative;
         
         img {
             width: 100%;
+            height: 100%;
         }
         a{
             text-decoration: none;
@@ -51,6 +52,7 @@ export default {
             top: 0;
             background: linear-gradient(rgba(255,255,255,.3) ,$mainColor 70%);
             height: 100%;
+            width: 100%;
             font-size: 18px;
             color: #fff;
             padding: 40px;

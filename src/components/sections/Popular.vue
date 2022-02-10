@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="popular">
         <div class="row justify-content-center">
             <div class="col-6 text-center my-5">
                 <h5>POPULAR RECIPES</h5>
@@ -34,7 +34,7 @@
             </div>
             <div class="col-6 p-3">
                 <div class="row">
-                    <div class="col-6 p-0" v-for="(element, index) in popular" :key="index">
+                    <div class="col-6 p-2" v-for="(element, index) in popular" :key="index">
                         <Popcard :piatto="element"/>
                     </div>
                 </div>
@@ -61,6 +61,9 @@ export default {
 
 <style lang="scss" scoped>
 @import '../../assets/style/variables.scss';
+    .popular {
+        margin-bottom: 100px;
+    }
     .principale {
         .immagine {
             position: relative;
@@ -119,6 +122,7 @@ export default {
                 border: none;
                 border-radius: 2px;
                 padding: 9px 20px;
+                margin-bottom: 20px;
             }
         }
         .immagine:hover .info{

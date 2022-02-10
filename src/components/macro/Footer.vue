@@ -30,7 +30,18 @@
               </div>
               <div class="col-3 px-4 mborder">
                   <h6>CONTACT</h6>
-                  
+                  <div class="mcolor">
+                      <span class="me-3"><i class="fas fa-map-marker-alt"></i></span>
+                      <div class="indirizzo m-0">775 New York Ave, Brooklyn, Kings, New York 11203</div>
+                  </div>
+                  <div class="mcolor">
+                      <span class="me-3"><i class="fas fa-phone"></i></span>
+                      <span>+ 0100-505-0000</span>
+                  </div>
+                  <div class="mcolor">
+                      <span class="me-3"><i class="fas fa-envelope"></i></span>
+                      <span>info@your-domain.com</span>
+                  </div>
               </div>
               <div class="col-3 px-4">
                   <h6>GET OUR APP!</h6>
@@ -68,7 +79,14 @@ export default {
 
 <style lang="scss" scoped>
 @import '../../assets/style/variables.scss';
+.indirizzo {
+    display: inline;
+}
 
+.mcolor {
+    color: #afafaf;
+    margin: 30px 0;
+}
     .mborder {
         border-right: dashed 1px #afafaf;
     }

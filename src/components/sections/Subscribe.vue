@@ -1,7 +1,7 @@
 <template>
     <div class="backsub">
         <div class="container text-center">
-            <h2>Subscribe & Receive A Free eBook</h2>
+            <h2>Subscribe <span>&</span> Receive A Free eBook</h2>
             <p>Aliquam erat volutpat. Ut quis ligula a magna blandit finibus. Suspendisse maximus lacus non nunc lacinia lobortis.</p>
             <input type="email" placeholder="Insert your email ...*">
             <button>SUBSCRIBE</button>
@@ -34,6 +34,9 @@ export default {
         h2 {
             font-size: 40px;
             margin-bottom: 30px;
+            span {
+                color: $mainColor;
+            }
         }
         p{
             color: #afafaf;
